@@ -21,11 +21,14 @@ if ! confirm "This will override your current nvim and tmux config. Do you want 
     exit 1
 fi
 # Copy neovim config into .config
-echo "Copying neovim config"
+echo "Replacing neovim config..."
+rm -rf ~/.config/nvim
+mkdir -p ~/.config/nvim
 cp -r ./neovim/* ~/.config/nvim
 
 # Copy tmux config into home dir
-echo "Copying tmux config"
+echo "Replacing tmux config..."
+rm -rf ~/.tmux.conf
 cp ./tmux/.tmux.conf ~/
 
 tmux source-file ~/.tmux.conf
