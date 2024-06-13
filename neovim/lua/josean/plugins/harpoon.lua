@@ -16,6 +16,10 @@ return {
 			harpoon:list():add()
 		end, { desc = "Harpoon add file" })
 
+		keymap.set("n", "<leader>hk", function()
+			harpoon:list():remove()
+		end, { desc = "Harpoon remove file" })
+
 		keymap.set("n", "<leader>hn", function()
 			-- toggle_telescope((harpoon:list()))
 			harpoon.ui:toggle_quick_menu(harpoon:list())
