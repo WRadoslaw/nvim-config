@@ -45,15 +45,3 @@ opt.swapfile = false
 
 opt.timeoutlen = 100
 opt.ttimeoutlen = 100
-
-vim.cmd([[
-  augroup ActiveWindow
-    autocmd!
-    autocmd WinEnter * if &filetype != 'nerdtree' && &filetype != 'NvimTree' | setlocal winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow | endif
-    autocmd WinLeave * if &filetype != 'nerdtree' && &filetype != 'NvimTree' | setlocal winhighlight=Normal:InactiveWindow,NormalNC:InactiveWindow | endif
-  augroup END
-
-  " Define highlight groups
-  hi ActiveWindow guibg=#1e1e1e
-  hi InactiveWindow guibg=#2e2e2e
-]])
