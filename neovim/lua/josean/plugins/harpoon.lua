@@ -24,5 +24,11 @@ return {
 			-- toggle_telescope((harpoon:list()))
 			harpoon.ui:toggle_quick_menu(harpoon:list())
 		end, { desc = "Harpoon add file" })
+
+		keymap.set("n", "<leader>np", function()
+			for i = 1, 9 do
+				harpoon:list():remove_at(i)
+			end
+		end, { desc = "Harpoon nuke history" })
 	end,
 }
