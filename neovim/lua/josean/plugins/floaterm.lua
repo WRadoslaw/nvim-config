@@ -20,8 +20,14 @@ return {
 
 		keymap.set(
 			"t",
-			"<Esc>",
+			"<C-o>",
 			"<C-\\><C-n>:q<CR>",
+			{ noremap = true, silent = true, desc = "Exit terminal without killing it" }
+		)
+		keymap.set(
+			"t",
+			"jk",
+			"<C-\\><C-n>",
 			{ noremap = true, silent = true, desc = "Exit terminal without killing it" }
 		)
 		keymap.set(
