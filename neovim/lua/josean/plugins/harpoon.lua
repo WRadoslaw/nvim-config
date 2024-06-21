@@ -25,7 +25,7 @@ return {
 			harpoon.ui:toggle_quick_menu(harpoon:list())
 		end, { desc = "Harpoon add file" })
 
-		keymap.set("n", "<leader>np", function()
+		keymap.set("n", "<leader>hp", function()
 			for i = 1, 9 do
 				harpoon:list():remove_at(i)
 			end
