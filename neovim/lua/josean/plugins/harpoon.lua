@@ -20,12 +20,12 @@ return {
 			harpoon:list():remove()
 		end, { desc = "Harpoon remove file" })
 
-		keymap.set("n", "<leader>hn", function()
+		keymap.set("n", "<leader>hl", function()
 			-- toggle_telescope((harpoon:list()))
 			harpoon.ui:toggle_quick_menu(harpoon:list())
-		end, { desc = "Harpoon add file" })
+		end, { desc = "Harpoon toggle list" })
 
-		keymap.set("n", "<leader>hp", function()
+		keymap.set("n", "<leader>hn", function()
 			for i = 1, 9 do
 				harpoon:list():remove_at(i)
 			end
