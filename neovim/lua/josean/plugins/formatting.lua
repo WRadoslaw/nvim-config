@@ -26,6 +26,11 @@ return {
 				async = false,
 				timeout_ms = 1000,
 			},
+			formatters = {
+				prettier = {
+					single_quote = true,
+				},
+			},
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>mp", function()
