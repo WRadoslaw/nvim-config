@@ -30,3 +30,6 @@ keymap.set("x", "p", "pgvy", { noremap = true, silent = true })
 
 keymap.set("i", "<C-h>", "<C-w>", { noremap = true, silent = true })
 keymap.set("i", "<C-v>", '<C-r>"', { noremap = true, silent = true })
+
+keymap.set("n", "<S-h>", "20k", { noremap = true, silent = true })
+keymap.set("n", "<S-j>", "20j", { noremap = true, silent = true })

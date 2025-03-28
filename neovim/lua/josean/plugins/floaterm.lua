@@ -26,7 +26,7 @@ return {
 		)
 		keymap.set(
 			"t",
-			"<C-k>",
+			"<C-y>",
 			"<C-\\><C-n>",
 			{ noremap = true, silent = true, desc = "Exit terminal without killing it" }
 		)
