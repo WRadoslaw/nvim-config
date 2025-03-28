@@ -5,10 +5,30 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     -- calling `setup` is optional for customization
-    require("fzf-lua").setup({})
+    local fzf = require("fzf-lua")
+    fzf.setup({
+      winopts = {
+        backdrop = 100,
+        winblend = 100
+      },
+      jumps = {
+        -- previewer = "builtin",
+        prompt = "Jumps> ",
+        cmd = "jumps",
+        file_icons = true,
+        git_icons = true,
+        color_icons = true,
+        ui_select = true,
+        sort_lastused = true,
+        show_line = true,
+      }
+    })
 
 
     local keymap = vim.keymap
+    keymap.set("n", "<leader>jf", function ()
+      fzf.jumps()
+    end)
 
     keymap.set("n", "<leader>ff", "<cmd>lua require('fzf-lua').files()<cr>")
     keymap.set("n", "<leader>fg", "<cmd>lua require('fzf-lua').git_files()<cr>")
