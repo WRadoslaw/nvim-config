@@ -16,14 +16,15 @@ return {
 			require("tokyonight").setup({
 				style = "night",
 				transparent = true,
+        terminal_colors = true,
 				on_colors = function(colors)
 					colors.bg = bg
 					colors.bg_dark = bg_dark
-					colors.bg_float = bg_dark
+					colors.bg_float = "none"
 					colors.bg_highlight = bg_highlight
 					colors.bg_popup = bg_dark
 					colors.bg_search = bg_search
-					colors.bg_sidebar = bg_dark
+					colors.bg_sidebar = "none"
 					colors.bg_statusline = bg_dark
 					colors.bg_visual = bg_visual
 					colors.border = border

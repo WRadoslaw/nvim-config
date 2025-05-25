@@ -45,3 +45,5 @@ opt.swapfile = false
 
 opt.timeoutlen = 100
 opt.ttimeoutlen = 100
+
+vim.g.lazyvim_picker = "fzf"

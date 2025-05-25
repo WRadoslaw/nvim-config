@@ -30,3 +30,19 @@ keymap.set("x", "p", "pgvy", { noremap = true, silent = true })
 
 keymap.set("i", "<C-h>", "<C-w>", { noremap = true, silent = true })
 keymap.set("i", "<C-v>", '<C-r>"', { noremap = true, silent = true })
+
+keymap.set("n", "<S-h>", "20k", { noremap = true, silent = true })
+keymap.set("n", "<S-j>", "20j", { noremap = true, silent = true })
+
+keymap.set("n", "<leader>co", function()
+    local absolute_path = vim.fn.expand("%:p")
+    vim.fn.setreg("+", absolute_path)
+    vim.notify("Copied absolute path: " .. absolute_path)
+end, { desc = "Copy absolute file path to clipboard" })
+
+keymap.set("n", "<leader>cp", function()
+    local relative_path = vim.fn.expand("%:.")
+    vim.fn.setreg("+", relative_path)
+    vim.notify("Copied relative path: " .. relative_path)
+end, { desc = "Copy relative file path to clipboard" })
+
