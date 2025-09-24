@@ -1,5 +1,6 @@
 return {
 	"goolord/alpha-nvim",
+	commit = "b6f4129",
 	event = "VimEnter",
 	config = function()
 		local alpha = require("alpha")

@@ -9,6 +9,13 @@ return {
 		-- import nvim-treesitter plugin
 		local treesitter = require("nvim-treesitter.configs")
 
+		local opt = vim.opt
+
+		opt.foldmethod = "expr"
+		opt.foldlevelstart = 99
+		opt.foldexpr = "nvim_treesitter#foldexpr()"
+		-- Remap 'zo' to toggle a fold instead of just opening it
+		vim.keymap.set("n", "zo", "za", { desc = "Toggle fold (instead of just open)" })
 		-- configure treesitter
 		treesitter.setup({ -- enable syntax highlighting
 			highlight = {
