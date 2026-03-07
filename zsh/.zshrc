@@ -38,7 +38,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/opt/homebrew/bin/idb
 export PATH="/usr/local/bin:$PATH"
-
+. "$HOME/.cargo/env"
 export ANTHROPIC_API_KEY=<key>
 export GEMINI_API_KEY=<key>
 
