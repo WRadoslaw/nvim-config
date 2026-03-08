@@ -1,0 +1,112 @@
+[
+  {
+    "name": "React Functional Component",
+    "text": "import React from 'react';\n\nexport const {NAME} = () => {\n  return (\n    <div>{NAME}</div>\n  );\n};",
+    "keyword": "!rfc"
+  },
+  {
+    "name": "useState Hook",
+    "text": "const [{STATE}, set{STATE}] = useState({DEFAULT});",
+    "keyword": "!us"
+  },
+  {
+    "name": "useEffect Hook",
+    "text": "useEffect(() => {\n  {CURSOR}\n}, []);",
+    "keyword": "!ue"
+  },
+  {
+    "name": "Tailwind Center Div",
+    "text": "flex items-center justify-center",
+    "keyword": "!tcenter"
+  },
+  {
+    "name": "Simple JS Log",
+    "text": "console.log({CURSOR});",
+    "keyword": "!log"
+  },
+  {
+    "name": "Object JSON Log",
+    "text": "console.log('{NAME}:', JSON.stringify({NAME}, null, 2));",
+    "keyword": "!jlog"
+  },
+  {
+    "name": "React Hook Log",
+    "text": "useEffect(() => {\n  console.log('{VAR} updated:', {VAR});\n}, [{VAR}]);",
+    "keyword": "!eflog"
+  },
+  {
+    "name": "Visual Marker Log",
+    "text": "console.log('%c --- {MARKER} --- ', 'background: #222; color: #bada55', {CURSOR});",
+    "keyword": "!vlog"
+  },
+  {
+    "name": "Express Async Handler",
+    "text": "const {NAME} = async (req, res, next) => {\n  try {\n    {CURSOR}\n  } catch (error) {\n    next(error);\n  }\n};",
+    "keyword": "!ehandler"
+  },
+  {
+    "name": "Import ESM",
+    "text": "import { {CURSOR} } from '{MODULE}';",
+    "keyword": "!imp"
+  },
+  {
+    "name": "Rust Print Debug",
+    "text": "println!(\"{:?}\", {CURSOR});",
+    "keyword": "!pd"
+  },
+  {
+    "name": "Tokio Main Async",
+    "text": "#[tokio::main]\nasync fn main() -> Result<(), Box<dyn std::error::Error>> {\n  {CURSOR}\n  Ok(())\n}",
+    "keyword": "!tmain"
+  },
+  {
+    "name": "Rust Match Result",
+    "text": "match {VARIABLE} {\n  Ok(val) => {CURSOR},\n  Err(e) => eprintln!(\"Error: {}\", e),\n}",
+    "keyword": "!mres"
+  },
+  {
+    "name": "Colima Start (High Perf)",
+    "text": "colima start --cpu 2 --memory 2 --disk 60 --arch aarch64 --vm-type=vz --vz-rosetta",
+    "keyword": "!colup"
+  },
+  {
+    "name": "Docker Prune All",
+    "text": "docker system prune -a --volumes",
+    "keyword": "!dclean"
+  },
+  {
+    "name": "Docker Exec Bash",
+    "text": "docker exec -it {ID} /bin/bash",
+    "keyword": "!dsh"
+  },
+  {
+    "name": "Colima Reset Hard",
+    "text": "colima stop && colima delete && colima start",
+    "keyword": "!colfix"
+  },
+  {
+    "name": "SSH with Agent Forwarding",
+    "text": "ssh -A {USER}@{HOST}",
+    "keyword": "!ssha"
+  },
+  {
+    "name": "SSH Local Tunnel",
+    "text": "ssh -L {LOCAL_PORT}:localhost:{REMOTE_PORT} {USER}@{HOST}",
+    "keyword": "!ssht"
+  },
+  {
+    "name": "SSH Reverse Tunnel",
+    "text": "ssh -R {REMOTE_PORT}:localhost:{LOCAL_PORT} {USER}@{HOST}",
+    "keyword": "!sshr"
+  },
+  {
+    "name": "SSH Copy Public Key",
+    "text": "pbcopy < ~/.ssh/id_ed25519.pub",
+    "keyword": "!sshcopy"
+  },
+  {
+    "name": "SSH Config Template",
+    "text": "Host {NAME}\n  HostName {IP}\n  User {USER}\n  IdentityFile ~/.ssh/id_ed25519",
+    "keyword": "!sshconf"
+  }
+]
